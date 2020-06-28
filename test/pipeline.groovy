@@ -1,29 +1,35 @@
 pipeline {
-   agent any
+  agent any
 
-   stages {
-      stage('Downloading Code') {
-         steps {
-            echo 'Downloading Code...'
-         }
+  stages {
+    stage('Downloading App Code') {
+      steps {
+        echo 'Downloading Code...'
       }
+    }
 
-      stage('Building Application') {
-         steps {
-            echo 'Building Application...'
-         }
+    stage('Building App') {
+      steps {
+        echo 'Building App...'
       }
+    }
 
-      stage('Running Tests in Application') {
-         steps {
-            echo 'Running Tests in Application...'
-         }
+    stage('Running Tests inside App') {
+      steps {
+        echo 'Running Tests inside App...'
       }
+    }
 
-      stage('Deploy Application') {
-         steps {
-            echo 'Deploying Application...'
-         }
+    stage('Deploy App') {
+      steps {
+        echo 'Deploying App...'
       }
-   }
+    }
+
+    stage('Cleaning Up') {
+      steps {
+        echo 'Cleaning Up...'
+      }
+    }
+  }
 }
